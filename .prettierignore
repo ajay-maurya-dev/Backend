@@ -1,0 +1,17 @@
+*.env
+.env
+/.vscode
+/node_modules
+/dist
+/build
+/logs
+*.log
+*.lock
+.DS_Store
+.idea
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?   
