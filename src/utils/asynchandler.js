@@ -1,10 +1,5 @@
-const asynchandler = (fn) => async(req, res, next) => {
-    try {
-        await fn(req, res, next);
-    }
-    catch(error) {
-        res.status(500).json({ message: error.message || "Internal Server Error" });
-    }
+const asyncHandler = (fn) => (req, res, next) => {
+    return Promise.resolve(fn(req, res, next)).catch(next);
 };
 
-export  { asynchandler };
+export { asyncHandler };
